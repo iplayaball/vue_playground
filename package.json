@@ -1,0 +1,33 @@
+{
+  "name": "vue_playground",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron_main.js",
+  "scripts": {
+    "dev": "concurrently vite \"pnpm run electron:dev\"",
+    "electron:dev": "electron .",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "element-plus": "^2.2.28",
+    "normalize.css": "^8.0.1",
+    "stylus": "^0.59.0",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "vite": "^4.0.0"
+  },
+  "build": {
+    "appId": "vue_playground",
+    "directories": {
+      "output": "output"
+    }
+  }
+}
